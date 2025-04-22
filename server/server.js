@@ -6,6 +6,12 @@ require('dotenv').config();
 
 const app = express();
 
+// auth.js route
+app.use('/api/auth', require('./routes/auth'));
+
+// wods.js route
+app.use('/api/wods', require('./routes/wods'));
+
 // Middleware
 app.use(cors());
 app.use(bodyParser.json());
